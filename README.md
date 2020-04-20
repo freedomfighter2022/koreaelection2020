@@ -1,6 +1,6 @@
 # Data for investigation on the general election of Korea in 2020
 
-A general election was held in South Korea on April 15, 2021. There has been the suspicion that the election was rigged. For the researchers and investigators who are interested in looking into this question, a sqlite3 database of the election is released. For comparison, the same kind of database for the previous general election in South Korea in 2016 is released also.
+A general election was held in South Korea on April 15, 2020. There has been the suspicion that the election was rigged. For the researchers and investigators who are interested in looking into this question, a sqlite3 database of the election is released. For comparison, the same kind of database for the previous general election in South Korea in 2016 is released also.
 
 There are two database files in this repository:
 
