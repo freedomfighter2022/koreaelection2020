@@ -2,12 +2,17 @@
 
 A general election was held in South Korea on April 15, 2020. There has been the suspicion that the election was rigged. For the researchers and investigators who are interested in looking into this question, a sqlite3 database of the election is released. For comparison, the same kind of database for the previous general election in South Korea in 2016 is released also.
 
-There are two database files in this repository:
+There are four database files in this repository:
 
+#### English version
 * South Korea 21th general election on April 15, 2020: korea_election_regional_21_eng.sqlite
 * South Korea 20th general election on April 13, 2016: korea_election_regional_20_eng.sqlite
 
-The schema of the two databases is the same. Below are the tables in each db.
+#### Korean version
+* South Korea 21th general election on April 15, 2020: korea_election_regional_21_kor.sqlite
+* South Korea 20th general election on April 13, 2016: korea_election_regional_20_kor.sqlite
+
+The schema of the four databases is the same. Below are the tables in each db.
 
 * area1: provincial level
   (uid int, name text)
