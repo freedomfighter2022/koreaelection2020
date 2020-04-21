@@ -63,3 +63,5 @@ Note on pre-voting: In both the 21st and the 20th general elections of Korea, 'p
 Note on summing the votes for each candidate: Some votes are recorded in area3-level and some in area4-level, which is due to the fact that voting by disabled voters, voting from ships, out-of-town pre-voting, and voting-from-abroad cannot have area4-level granularity. `vote` table has votes from both these area3-level voting posts and area4-level voting posts.
 
 Korean people are finding suspicious statistics from this data, but claims by Korean people on Korean election data can be painted as partisan. Thus, we are seeking the international community of statisticians, election fraud investigators, and data scientists to provide objective opinions.
+
+Please leave any bug report at https://github.com/freedomfighter2022/koreaelection2020/issues.
