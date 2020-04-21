@@ -1,18 +1,19 @@
 # Data for investigation on the general election of Korea in 2020
 
-A general election was held in South Korea on April 15, 2020. There has been the suspicion that the election was rigged. For the researchers and investigators who are interested in looking into this question, a sqlite3 database of the election is released. For comparison, the same kind of database for the previous general election in South Korea in 2016 is released also.
+A general election was held in South Korea on April 15, 2020. There has been the suspicion that this year's election was rigged. For the researchers and investigators who are interested in looking into this question, sqlite3 databases of the current and previous general elections of Korea are released.
 
-There are four database files in this repository:
+There are 4 database files in this repository:
 
-#### English version
-* South Korea 21th general election on April 15, 2020: korea_election_regional_21_eng.sqlite
-* South Korea 20th general election on April 13, 2016: korea_election_regional_20_eng.sqlite
+* korea_election_regional_20_eng.sqlite: South Korea 20th general election for regional representatives on April 13, 2016
+* korea_election_proportional_20_eng.sqlite: South Korea 20th general election for proportional representatives on April 13, 2016
+* korea_election_regional_21_eng.sqlite: South Korea 21th general election for regional representatives on April 15, 2020
+* korea_election_proportional_21_eng.zip: South Korea 21th general election for proportional representatives on April 15, 2020 (decompress to get .sqlite file)
 
-#### Korean version
-* South Korea 21th general election on April 15, 2020: korea_election_regional_21_kor.sqlite
-* South Korea 20th general election on April 13, 2016: korea_election_regional_20_kor.sqlite
+In the 20th and the 21st elections, every voter cast one vote for a "regional" representative and another vote for a political party. A regional representative was elected in each election district based on the sum of the first vote. The second vote was tallied nationwide by political parties and a fixed number of "proportional" representative seats were divided and given to each political party according to their proportion of the second votes.
 
-The schema of the four databases is the same. Below are the tables in each db.
+The regional and proportional votes in the 20th election and the regional votes in the 21st election were counted electronically. The proportional votes in the 21st one were counted by humans.
+
+The four databases have the same architecture. Below are the tables in each db.
 
 * area1: provincial level
   (uid int, name text)
@@ -33,7 +34,7 @@ The schema of the four databases is the same. Below are the tables in each db.
     `prevote_out` is the voters who live outside of their election district and voted before the election day.
     `abroad` is the voters who live and voted outside Korea.
     `abroad_office` is the voters who live in abroad Korean foreign offices and voted outside of Korea.
-    (`abroad_office` exists only is korea_election_regional_21_end.sqlite.)
+    (`abroad_office` exists only in the 21st election data.)
 
 * area4: voting post level
   (uid int, name text, area3 int, sum_people int, sum_vote int, sum_invalid int, sum_novote int)
@@ -51,11 +52,14 @@ The schema of the four databases is the same. Below are the tables in each db.
 * candidate: candidates
   (uid int, name text, party int)
   `party` is `uid` in `party` table.
+  This table exists only in regional election data.
 
 * vote: votes
-  (candidate int, area int, vote int)
+  (candidate int, area int, vote int) in regional election data
+  (party int, area int, vote int) in proportional election data
   The number of votes for a given candidate in a given area.
   `candidate` is `uid` of `candidate` table.
+  `party` is `uid` of `party` table.
   `area` is `uid` of either `area3` or `area4` table.
 
 Note on pre-voting: In both the 21st and the 20th general elections of Korea, 'pre-voting' was done, which is to vote before the election day. The total number of votes for a candidate is calculated by adding the votes for him/her from pre-voting and those from the election day. In the 21st general election of Korea for example, pre-voting was done on April 10th and 11th, 2020 and the election day was April 15, 2020. There is the suspicion that the result of pre-voting might have been rigged in the 21st election but not in the 20th one. `prevote_in` in `area4` table and 'prevote_out` in `area3` table record the votes cast by pre-voting.
@@ -65,3 +69,16 @@ Note on summing the votes for each candidate: Some votes are recorded in area3-l
 Korean people are finding suspicious statistics from this data, but claims by Korean people on Korean election data can be painted as partisan. Thus, we are seeking the international community of statisticians, election fraud investigators, and data scientists to provide objective opinions.
 
 Please leave any bug report at https://github.com/freedomfighter2022/koreaelection2020/issues.
+
+Below is for Korean speakers.
+
+# 20대와 21대 대한민국 총선 데이터베이스
+
+지역구와 비례대표 선거 결과를 각각 데이터베이스화 하였습니다.
+
+* 21대 지역구: korea_election_regional_21_kor.sqlite
+* 20대 지역구: korea_election_regional_20_kor.sqlite
+* 21대 비례대표: korea_election_proportional_21_kor.zip (압축을 푸십시오)
+* 20대 비례대표: korea_election_proportional_20_kor.sqlite
+
+데이터베이스의 구조는 위의 영문 설명을 참조해 주십시오.
