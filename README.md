@@ -5,8 +5,8 @@ A general election was held in South Korea on April 15, 2020. There has been the
 There are 4 database files in this repository:
 
 * korea_election_regional_20_eng.sqlite: South Korea 20th general election for regional representatives on April 13, 2016
-* korea_election_proportional_20_eng.sqlite: South Korea 20th general election for proportional representatives on April 13, 2016
 * korea_election_regional_21_eng.sqlite: South Korea 21th general election for regional representatives on April 15, 2020
+* korea_election_proportional_20_eng.sqlite: South Korea 20th general election for proportional representatives on April 13, 2016
 * korea_election_proportional_21_eng.zip: South Korea 21th general election for proportional representatives on April 15, 2020 (decompress to get .sqlite file)
 
 In the 20th and the 21st elections, every voter cast one vote for a "regional" representative and another vote for a political party. A regional representative was elected in each election district based on the sum of the first vote. The second vote was tallied nationwide by political parties and a fixed number of "proportional" representative seats were divided and given to each political party according to their proportion of the second votes.
@@ -62,6 +62,17 @@ The four databases have the same architecture. Below are the tables in each db.
   `party` is `uid` of `party` table.
   `area` is `uid` of either `area3` or `area4` table.
 
+There also is one compressed file, korea_election_20_and_21_regional_and_proportional_txt_eng.zip, which has the following 4 flat files:
+
+* korea_election_regional_20_eng.txt: South Korea 20th general election for regional representatives on April 13, 2016
+* korea_election_regional_21_eng.txt: South Korea 21th general election for regional representatives on April 15, 2020
+* korea_election_proportional_20_eng.txt: South Korea 20th general election for proportional representatives on April 13, 2016
+* korea_election_proportional_21_eng.txt: South Korea 21th general election for proportional representatives on April 15, 2020
+
+The flat files have the following columns:
+
+area1 | area2 | area3 | area4 | party | candidate (regional files only) | vote
+
 Note on pre-voting: In both the 21st and the 20th general elections of Korea, 'pre-voting' was done, which is to vote before the election day. The total number of votes for a candidate is calculated by adding the votes for him/her from pre-voting and those from the election day. In the 21st general election of Korea for example, pre-voting was done on April 10th and 11th, 2020 and the election day was April 15, 2020. There is the suspicion that the result of pre-voting might have been rigged in the 21st election but not in the 20th one. `prevote_in` in `area4` table and 'prevote_out` in `area3` table record the votes cast by pre-voting.
 
 Note on summing the votes for each candidate: Some votes are recorded in area3-level and some in area4-level, which is due to the fact that voting by disabled voters, voting from ships, out-of-town pre-voting, and voting-from-abroad cannot have area4-level granularity. `vote` table has votes from both these area3-level voting posts and area4-level voting posts.
@@ -82,3 +93,14 @@ Below is for Korean speakers.
 * 20대 비례대표: korea_election_proportional_20_kor.sqlite
 
 데이터베이스의 구조는 위의 영문 설명을 참조해 주십시오.
+
+텍스트 파일로 된 자료는 korea_election_20_and_21_regional_and_proportional_txt_kor.zip 에 들어 있습니다. 이 파일에는 아래의 4개 파일이 들어 있습니다.
+
+* korea_election_regional_20_kor.txt: 20대 지역구
+* korea_election_regional_21_kor.txt: 21대 지역구
+* korea_election_proportional_20_kor.txt: 20대 비례대표
+* korea_election_proportional_21_kor.txt: 21대 비례대표
+
+위의 텍스트 파일들에는 아래의 컬럼들이 있습니다.
+
+시/도 | 구/군 | 동/면 | 투표소 | 당 | 후보 (지역구 파일에만 존재) | 득표수
