@@ -4,8 +4,8 @@ A general election was held in South Korea on April 15, 2020. There has been the
 
 There are two database files in this repository:
 
-1. South Korea 21th general election on April 15, 2020: korea_election_regional_21_eng.sqlite
-2. South Korea 20th general election on April 13, 2016: korea_election_regional_20_eng.sqlite
+* South Korea 21th general election on April 15, 2020: korea_election_regional_21_eng.sqlite
+* South Korea 20th general election on April 13, 2016: korea_election_regional_20_eng.sqlite
 
 The schema of the two databases is the same. Below are the tables in each db.
 
