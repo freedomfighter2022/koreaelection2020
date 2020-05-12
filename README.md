@@ -1,6 +1,8 @@
 # Data for investigation on the general election of Korea in 2020
 
-(Update: \*_regional_*.sqlite files have been updated with the latest data from the National Election Commission of Korea as of 2020/04/29.)
+Update: korea_election_regional_21_(kor/eng).sqlite files have been updated with correct num_invalid and num_novote. Also, independent candidates were assigned to separate independent parties (musosog1, musosog2, and etc) in this update.
+
+Update: \*_regional_*.sqlite files have been updated with the latest data from the National Election Commission of Korea as of 2020/04/29.
 
 A general election was held in South Korea on April 15, 2020. There has been the suspicion that this year's election was rigged. For the researchers and investigators who are interested in looking into this question, sqlite3 databases of the current and previous general elections of Korea are released.
 
