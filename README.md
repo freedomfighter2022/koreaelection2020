@@ -1,6 +1,6 @@
 # Data for investigation on the general election of Korea in 2020
 
-Update 2020/05/17: Updated korea_election_regional_20_(kor/eng).sqlite files have been updated with correct num_invalid and num_novote. Also, independent candidates were assigned to separate independent parties (musosog1, musosog2, and etc) in this update.
+Update 2020/05/17: Updated korea_election_regional_20_(kor/eng).sqlite files have been updated with correct num_invalid and num_novote. Also, independent candidates were assigned to separate independent parties (musosog1, musosog2, and etc) in this update. Also, updated proportional election data for the 20th and 21st with the fix on num_invalid and num_novote and using the latest data from the NEC.
 
 Update: korea_election_regional_21_(kor/eng).sqlite files have been updated with correct num_invalid and num_novote. Also, independent candidates were assigned to separate independent parties (musosog1, musosog2, and etc) in this update.
 
