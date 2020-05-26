@@ -1,3 +1,19 @@
+##################
+#
+# Usage: python makedb_21_regional.py <output sqlite file path> <kor/eng switch>
+#
+# Examples: 
+#     1. Korean version
+#        >python makedb_21_regional.py korea_election_regional_21_kor.sqlite kor
+#     2. English version
+#        >python makedb_21_regional.py korea_election_regional_21_eng.sqlite eng
+#
+# Data source: https://www.nec.go.kr/portal/bbs/view/B0000338/40935.do?menuNo=200185
+#              Download and unzip the file.
+#              Go to 지역구 folder.
+#              Run this script as shown in Examples.
+#
+##################
 import xlrd
 import glob
 import sqlite3
