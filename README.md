@@ -1,5 +1,7 @@
 # Data for investigation on the general election of Korea in 2020
 
+Updated 2020/05/28: Added constituency data to the 20th regional election sqlite files (korea_election_regional_20_kor.sqlite and korea_election_regional_20_eng.sqlite). The source of constituency-voting district mapping was the National Election Committee (https://www.nec.go.kr/portal/bbs/view/B0000338/32767.do).
+
 Update 2020/05/26: Added makedb_21_regional.py, which is a script to make korea_election_regional_21_[kor/eng].sqlite. Usage is in the script.
 
 Update 2020/05/17: Updated korea_election_regional_20_(kor/eng).sqlite files have been updated with correct num_invalid and num_novote. Also, independent candidates were assigned to separate independent parties (musosog1, musosog2, and etc) in this update. Also, updated proportional election data for the 20th and 21st with the fix on num_invalid and num_novote and using the latest data from the NEC.
