@@ -1,5 +1,7 @@
 # Data for investigation on the general election of Korea in 2020
 
+Updated 2020/06/02: Fixed constituency and area_constituency tables in korea_election_regional_20_(kor/eng).sqlite.
+
 Updated 2020/05/28: Added constituency data to the 20th regional election sqlite files (korea_election_regional_20_kor.sqlite and korea_election_regional_20_eng.sqlite). The source of constituency-voting district mapping was the National Election Committee (https://www.nec.go.kr/portal/bbs/view/B0000338/32767.do).
 
 Update 2020/05/26: Added makedb_21_regional.py, which is a script to make korea_election_regional_21_[kor/eng].sqlite. Usage is in the script.
